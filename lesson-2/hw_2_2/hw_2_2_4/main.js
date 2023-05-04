@@ -28,5 +28,4 @@ switch (dayNumber) {
     break;
   default:
     console.log("Уведено невірне значення");
-    break;
 }
