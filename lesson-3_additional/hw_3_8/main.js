@@ -629,9 +629,11 @@ const postList = [
 
 document.write(`<div class="wrap">`);
 for (const postListElement of postList) {
-  document.write(`<div class="post-card">`);
-  document.write(`<h3>${postListElement.id} - ${postListElement.title}</h3>`);
-  document.write(`<p>${postListElement.body}</p>`);
-  document.write(`</div>`);
+  document.write(`
+    <div class="post-card">
+    <h3>${postListElement.id} - ${postListElement.title}</h3>
+    <p>${postListElement.body}</p>
+    </div>
+  `);
 }
 document.write(`</div>`);

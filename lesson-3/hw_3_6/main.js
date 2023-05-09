@@ -59,15 +59,26 @@ let products = [
   },
 ];
 
+// document.write(`<div class="product-wrapper">`);
+// for (const product of products) {
+//   document.write(`<div class="product-card">`);
+//   document.write(
+//     `<h3 class="product-title">${product.title}. Price - ${product.price}</h3>`
+//   );
+//   document.write(
+//     `<img src="${product.image}" alt="${product.title}" class="product-image"/>`
+//   );
+//   document.write(`</div>`);
+// }
+// document.write(`</div>`);
+
 document.write(`<div class="product-wrapper">`);
 for (const product of products) {
-  document.write(`<div class="product-card">`);
-  document.write(
-    `<h3 class="product-title">${product.title}. Price - ${product.price}</h3>`
-  );
-  document.write(
-    `<img src="${product.image}" alt="${product.title}" class="product-image"/>`
-  );
-  document.write(`</div>`);
+  document.write(`
+    <div class="product-card">
+      <h3 class="product-title">${product.title}. Price - ${product.price}</h3>
+      <img src="${product.image}" alt="${product.title}" class="product-image"/>
+    </div>
+  `);
 }
 document.write(`</div>`);

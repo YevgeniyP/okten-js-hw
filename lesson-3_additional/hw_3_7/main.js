@@ -249,20 +249,18 @@ const usersList = [
 
 document.write(`<div class="users-box">`);
 for (const usersListElement of usersList) {
-  document.write(`<div class="user-block">`);
-  document.write(
-    `<h2>${usersListElement.id} - ${usersListElement.name} - ${usersListElement.username}</h2>`
-  );
-  document.write(
-    `<h3>${usersListElement.email} - ${usersListElement.phone}</h3>`
-  );
   const userAddress = usersListElement["address"];
-  document.write(`<div class="address-block">`);
-  document.write(`<p>City - ${userAddress.city}</p>`);
-  document.write(`<p>Steet - ${userAddress.street}</p>`);
-  document.write(`<p>Suite - ${userAddress.suite}</p>`);
-  document.write(`<p>Zip code - ${userAddress.zipcode}</p>`);
-  document.write(`</div>`);
-  document.write(`</div>`);
+  document.write(`
+    <div class="user-block">
+      <h2>${usersListElement.id} - ${usersListElement.name} - ${usersListElement.username} </h2>
+      <h3>${usersListElement.email} - ${usersListElement.phone}</h3>
+      <div class="address-block">
+        <p>City - ${userAddress.city}</p>
+        <p>Street - ${userAddress.street}</p>
+        <p>Suite - ${userAddress.suite}</p>
+        <p>Zip code - ${userAddress.zipcode}</p>
+      </div>
+    </div>
+  `);
 }
 document.write(`</div>`);
