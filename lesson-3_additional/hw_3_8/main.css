@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: lightgray;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 15px;
+}
+
+.post-card {
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px gray;
+  background: #fff;
+  transition-duration: 500ms;
+  border: 2px solid #fff;
+}
+
+.post-card:hover {
+  border: 2px solid red;
+  transition-duration: 500ms;
+}
+
+.post-card > h3 {
+  color: #323232;
+  text-align: center;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.post-card > p {
+  text-align: justify;
+}
