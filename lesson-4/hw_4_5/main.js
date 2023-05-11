@@ -1,7 +1,7 @@
 // Створити функцію, яка створює параграф з текстом. Текст задати через аргумент
 
 function paragraphPrinter(text) {
-  return document.write(`
+  document.write(`
     <p>${text}</p>
   `);
 }
