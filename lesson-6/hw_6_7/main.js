@@ -4,11 +4,20 @@
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
 
+// const sortNums = (nums, direction = "ascending") => {
+//   if (direction === "ascending") {
+//     return nums.sort((a, b) => a - b);
+//   } else if (direction === "descending") {
+//     return nums.sort((a, b) => b - a);
+//   }
+// };
+
 const sortNums = (nums, direction = "ascending") => {
-  if (direction === "ascending") {
-    return nums.sort((a, b) => a - b);
-  } else if (direction === "descending") {
-    return nums.sort((a, b) => b - a);
+  switch (direction) {
+    case "ascending":
+      return nums.sort((a, b) => a - b);
+    case "descending":
+      return nums.sort((a, b) => b - a);
   }
 };
 

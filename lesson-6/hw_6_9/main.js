@@ -69,14 +69,20 @@ const diamondCardsFilter = deckOfCards.filter(
 
 console.log(diamondCardsFilter);
 
+// const clubsCardFilter = deckOfCards.filter(
+//   (card) =>
+//     card.cardSuit === "clubs" &&
+//     (+card.value >= 9 ||
+//       card.value === "jack" ||
+//       card.value === "queen" ||
+//       card.value === "king" ||
+//       card.value === "ace")
+// );
+
 const clubsCardFilter = deckOfCards.filter(
   (card) =>
     card.cardSuit === "clubs" &&
-    (+card.value >= 9 ||
-      card.value === "jack" ||
-      card.value === "queen" ||
-      card.value === "king" ||
-      card.value === "ace")
+    ["9", "10", "jack", "queen", "king", "ace"].includes(card.value)
 );
 
 console.log(clubsCardFilter);

@@ -34,10 +34,9 @@ const filterArray = coursesAndDurationArray.filter(
 
 console.log(filterArray);
 
-const newArray = coursesAndDurationArray.map((course, index) => {
-  const element = { ...course };
-  element.id = index + 1;
-  return element;
-});
+const newArray = coursesAndDurationArray.map((course, index) => ({
+  ...course,
+  id: index + 1,
+}));
 
 console.log(newArray);
