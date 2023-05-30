@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+}
+
+.wrap {
+  margin: 10px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-columns: 1fr;
+  gap: 10px;
+}
+
+.course-item {
+  padding: 6px;
+  display: grid;
+  border: 4px solid blue;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px 40px auto;
+  grid-template-areas: "header header header" "mduration hduration hduration" "modules modules modules";
+  gap: 3px;
+}
+
+.header {
+  grid-area: header;
+  align-self: center;
+  justify-self: center;
+  border-bottom: 2px solid red;
+}
+
+.mduration {
+  grid-area: mduration;
+  padding: 3px;
+  display: grid;
+  align-items: center;
+  border: 2px solid green;
+}
+
+.hduration {
+  grid-area: hduration;
+  padding: 3px;
+  display: grid;
+  align-items: center;
+  border: 2px solid green;
+}
+
+.modules {
+  grid-area: modules;
+  padding: 3px;
+  display: grid;
+  align-items: center;
+  border: 2px solid green;
+}
+
+.modules > li {
+  list-style: none;
+}
